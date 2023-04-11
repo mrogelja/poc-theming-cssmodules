@@ -1,0 +1,20 @@
+{
+  "name": "@poc/theme",
+  "version": "1.0.0",
+  "description": "",
+  "module": "src/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "deepmerge": "4.3.1"
+  },
+  "devDependencies": {
+    "react": "^18.2.0"
+  }
+}

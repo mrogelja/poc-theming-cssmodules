@@ -1,0 +1,21 @@
+{
+  "name": "@poc/components",
+  "version": "1.0.0",
+  "description": "",
+  "module": "src/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "@poc/theme": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0"
+  }
+}
