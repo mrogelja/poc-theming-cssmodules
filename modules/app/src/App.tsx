@@ -1,13 +1,7 @@
-import { createTheme, injectTheme } from '@poc/theme';
 import { Button } from '@poc/components';
 import styles from './App.module.css';
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {
-    injectTheme(createTheme());
-  }, []);
-
   return (
     <div className={styles.root}>
       <Button>Bouton normal</Button>
