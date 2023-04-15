@@ -1,36 +1,42 @@
 .root {
-  --font-size: var(--button-font-size, 15px);
-  --border-radius: var(--button-border-radius, 2px);
-  --background-color: #496b76;
-  --background-color-active: #7ea1ad;
-  --color: white;
+  --button-font-size: var(--button-font-size, var(--font-size, 15px));
+  --button-border-radius: var(--button-border-radius, 2px);
+  --button-background-color: var(--button-color-primary, var(--color-primary, #496b76));
+  --button-text-color: var(--button-text-color-primary, var(--color-primary-text, white));
+  --button-background-color-active: var(--button-color-active, var(--color-active, #c5edfb));
+  --button-text-color-active: var(--button-text-color-active, var(--color-active-text, #64a1b5));
 
-  font-size: var(--font-size);
+  font-size: var(--button-font-size);
   border: 1px solid #e9e9e9;
-  border-radius: var(--border-radius);
+  border-radius: var(--button-border-radius);
   padding: 0.6em 1.2em;
-  background-color: var(--background-color);
-  color: var(--color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
   cursor: pointer;
 }
 
 .root:active {
-  background-color: var(--background-color-active);
+  --button-background-color: var(--button-background-color-active);
+  --button-text-color: var(--button-text-color-active);
 }
 
 .selected {
-  --background-color: #c5edfb;
-  --background-color-active: #93d4ea;
-  --color: #496b76;
+  --button-background-color: var(--button-background-color-active);
+  --button-text-color: var(--button-text-color-active);
+}
+
+.selected:active {
+  --button-background-color: var(--button-background-color-active);
+  --button-text-color: var(--button-text-color-active);
 }
 
 .disabled {
-  --background-color: #e4e4e4;
-  --color: #cbcbcb;
+  --button-background-color: var(--button-color-disabled, var(--color-disabled, #e4e4e4));
+  --button-text-color: var(--button-text-color-disabled, var(--color-disabled-text, #cbcbcb));
   cursor: initial;
   pointer-events: none;
 }
 
 .mini {
-  --font-size: 12px;
+  --button-font-size: 12px;
 }

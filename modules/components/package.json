@@ -4,27 +4,28 @@
   "description": "",
   "module": "src/index.js",
   "type": "module",
-  "files": ["dist"],
-  "main": "./dist/components.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./lib/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "rimraf lib && tsc && copyfiles -u 1 src/**/*.css lib/"
   },
   "dependencies": {
-    "react": "^18.2.0",
     "@poc/theme": "workspace:^1.0.0",
-    "clsx": "^1.2.1"
+    "clsx": "^1.2.1",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.0",
     "stylelint": "^14.16.1",
     "typescript": "^5.0.2",
-    "vite": "^4.2.1"
+    "typescript-plugin-css-modules": "^5.0.1"
   }
 }

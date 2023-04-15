@@ -13,8 +13,8 @@ function App() {
       <Button
         style={
           {
-            '--font-size': '22px',
-            '--background-color': 'red',
+            '--button-font-size': '22px',
+            '--button-background-color': 'red',
           } as React.CSSProperties
         }
       >
